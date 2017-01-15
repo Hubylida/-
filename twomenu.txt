@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二级下拉菜单</title>
+	<style>
+
+		*{
+			margin:0;
+			padding: 0;
+		}
+		body{
+			background-color: #eee;
+		}
+		.nav{
+			background-color: #44c767;/*div块的背景颜色*/
+			height: 45px;
+			width: 455px;
+			position: absolute;
+			top: 0;bottom: 0;left: 0;right: 0;/*导航条居中*/
+			margin:auto;
+			box-shadow: 0px 0px 35px 2px #3dc21b;/*阴影颜色*/
+			font-family: Arial;
+			font-size: 17px;	
+			/*border-radius: 28px;*/		
+		}
+		/*横向一级菜单样式设置*/	
+		ul{
+			list-style-type: none;/*删除圆点*/
+			
+		}
+		ul li{
+			float: left;
+			line-height: 45px;
+			text-align: center;
+			position: relative;
+			text-transform: uppercase;
+			border-radius: 20px;
+		}
+		a{
+			text-decoration: none;
+			color: #fff;
+			display: block;/*将a行内元素转变成块级元素*/
+			width:90px;
+			height: 40px;
+			letter-spacing: 1px;
+			/*border-radius: 28px;*/
+			
+		}
+		
+		a:hover{
+			background-color: #44c767;/*鼠标放在一级菜单时单个元素的背景颜色*/
+			color:#fff;/*a中字体颜色*/
+		}
+		/*二级下拉菜单样式设置*/
+		ul li ul li{
+			float: none;
+			background-color: #5cbf2a;
+		}
+		ul li ul {
+			position: absolute;
+			top: 40px;
+			left: 0px;
+			display: none;/*默认状态下或鼠标离开时隐藏，display隐藏后不占空间，visibility的hidden占用空间*/
+			width: 90px;
+		}
+		ul li ul li a:link,ul li ul li a:visited{
+			background-color: #5cbf2a;/*二级菜单的颜色*/
+		}/*hover要在link和visited之后*/
+		ul li ul li a:hover{
+			background-color: #18ab29;/*鼠标划过二级菜单时背景变色*/
+
+		}
+		/*鼠标划过一级菜单的元素时显示下拉菜单*/
+		ul li:hover ul {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<div  class="nav">
+	<ul>
+		<li><a href="" >home</a>
+			<ul >
+				<li><a href="">I</a></li>
+				<li><a href="">love</a></li>
+				<li><a href="">you</a></li>
+				<li><a href="">!</a></li>
+			</ul>
+		</li>
+		<li><a href="">music</a>
+			<ul>
+				<li><a href="">guns</a></li>
+				<li><a href="">maroon5</a></li>
+				<li><a href="">eagles</a></li>
+				<li><a href="">beatles</a></li>
+			</ul>
+		</li>
+	    <li><a href="">news</a>
+			<ul>
+				<li><a href="">bbc</a></li>
+				<li><a href="">espn</a></li>
+				<li><a href="">cctv</a></li>
+				<li><a href="">cnn</a></li>
+			</ul>
+	    </li>
+		<li><a href="">game</a>
+			<ul>
+				<li><a href="">gta</a></li>
+				<li><a href="">dota</a></li>
+				<li><a href="">cod</a></li>
+				<li><a href="">mc</a></li>
+			</ul>
+		</li>
+		<li><a href="">movie</a>
+			<ul>
+				<li><a href="">douban</a></li>
+				<li><a href="">youtube</a></li>
+				<li><a href="">youku</a></li>
+				<li><a href="">souhou</a></li>
+			</ul>
+		</li>
+		
+	</ul>
+</div>
+
+</body>
+</html>
